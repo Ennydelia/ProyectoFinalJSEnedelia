@@ -182,7 +182,7 @@ const eliminarEgreso = (id) =>{
     const indiceEliminar = egresos.findIndex((egreso) => egreso._id === id);
     // Verifica si se encontró el índice
     if (indiceEliminar !== -1) {
-        alert(indiceEliminar);
+        //alert(indiceEliminar);
         // Elimina el elemento del arreglo utilizando splice
         egresos.splice(indiceEliminar, 1);
 
@@ -205,7 +205,7 @@ const agregarDato = () => {
     const valor = forma.querySelector("#valor").value;
 
     // Se hace validacion que no se encuentren vacios o que se encuentren con valores por default
-    if (descripcion.trim() !== "Agregar Descripcion"  && valor.trim() < 1 ) {
+    if (descripcion.trim() !== "Agregar Descripcion"  && valor.trim() !== 0 ) {
         // Validacion del tipo de ingreso
         if (tipo === "ingreso") {
             ingresos.push(new Ingreso(descripcion, parseFloat(valor)));
